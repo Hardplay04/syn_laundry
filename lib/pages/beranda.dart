@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syn_laundry/pages/notifikasi.dart';
 import 'package:syn_laundry/themes/themes.dart';
 
 class Beranda extends StatelessWidget {
@@ -16,7 +17,14 @@ class Beranda extends StatelessWidget {
                   fontSize: 18, fontWeight: FontWeight.w500),
             ),
           ),
-          actions: const [Icon(Icons.notifications)],
+          actions: [
+            InkWell(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Notifikasi()));
+                },
+                child: Icon(Icons.notifications))
+          ],
         ),
         body: ListView(
           padding: const EdgeInsets.only(left: 35, right: 35),

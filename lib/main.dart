@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:syn_laundry/pages/Sukses.dart';
 import 'package:syn_laundry/pages/beranda.dart';
+import 'package:syn_laundry/pages/info_cucian.dart';
+import 'package:syn_laundry/pages/informasi_pesanan_page.dart';
+import 'package:syn_laundry/pages/landing_page.dart';
+import 'package:syn_laundry/pages/list_order_page.dart';
 import 'package:syn_laundry/pages/login_page.dart';
+import 'package:syn_laundry/pages/notifikasi.dart';
 import 'package:syn_laundry/pages/pesanan_1.dart';
+import 'package:syn_laundry/pages/profil_page.dart';
 import 'package:syn_laundry/pages/register_page.dart';
 import 'package:syn_laundry/pages/splash_page.dart';
 
@@ -38,7 +44,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Beranda(),
+      home: InfoCucian(),
     );
   }
 }

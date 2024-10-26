@@ -9,6 +9,7 @@ Color yellowColor = Color(0XFFE4B22F);
 Color redColor = Color(0XFFE63232);
 Color greyColor = Color(0XFF777777);
 Color whiteColor = Color(0XFFFFFFFF);
+Color greencolor = Color(0xFFE8FFF6);
 
 //buat variable untuk menampung value dari style text
 TextStyle primaryTextStyle = GoogleFonts.dmSans(
@@ -34,3 +35,5 @@ TextStyle greenTextStyle = GoogleFonts.dmSans(
 TextStyle redTextStyle = GoogleFonts.dmSans(
   color: redColor,
 );
+
+TextStyle greenTextStle = GoogleFonts.dmSans(color: greencolor);

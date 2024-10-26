@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syn_laundry/pages/login_page.dart';
 import 'package:syn_laundry/themes/themes.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -9,11 +10,17 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-          margin: EdgeInsets.only(left: 10, right: 5, top: 5),
-          child: Image.asset(
-            'assets/ic-back.png',
-            height: 20,
-            width: 120,
+          margin: const EdgeInsets.only(left: 10, right: 5, top: 5),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
+            },
+            child: Image.asset(
+              'assets/ic-back.png',
+              height: 20,
+              width: 120,
+            ),
           ),
         ),
         title: Text(
@@ -23,6 +30,7 @@ class RegisterPage extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
+        actions: [Text('Tandai Terbaca')],
       ),
       body: ListView(
         children: [
