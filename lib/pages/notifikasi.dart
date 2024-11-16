@@ -35,6 +35,8 @@ class Notifikasi extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
+                    width: double.infinity,
+                    height: 47,
                     margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                     decoration: BoxDecoration(color: greencolor),
                     child: Row(

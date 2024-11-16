@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:syn_laundry/controller/auth_controller.dart';
+import 'package:syn_laundry/pages/beranda.dart';
 import 'package:syn_laundry/pages/register_page.dart';
 import 'package:syn_laundry/themes/themes.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final authC = Get.put(AuthController());
     return Scaffold(
       body: ListView(
         children: [
@@ -34,6 +38,7 @@ class LoginPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TextFormField(
+                  controller: authC.email,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
                       hintText: 'Masukan Username',
@@ -52,6 +57,7 @@ class LoginPage extends StatelessWidget {
                   height: 37,
                 ),
                 TextFormField(
+                  controller: authC.password,
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
@@ -94,7 +100,11 @@ class LoginPage extends StatelessWidget {
                           backgroundColor: Color(0xFF4ABF92),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15))),
-                      onPressed: null,
+                      onPressed: () {
+                        authC.login();
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => LandingPage()));
+                      },
                       child: Text(
                         'Masuk',
                         style: TextStyle(color: Colors.white),
